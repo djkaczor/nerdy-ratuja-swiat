@@ -1,66 +1,98 @@
-.myNav
-{
-    -webkit-box-shadow: 0px 12px 7px -10px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 12px 7px -10px rgba(255,255,255,1);
-    box-shadow: 0px 12px 7px -10px rgba(255,255,255,1);
-    padding-bottom: 10px;
-}
+$bg-color: #302e2e;
+$bg-color-elementy: rgb(235, 231, 215);
+$bg-color-elementy-oppacity: rgb(235, 231, 215, .7);
+$color-font: black;
 
-.contener
+#menu-kontener
 {
-    color: white;  
-    width: 1200px;
+    background-color: $bg-color;
     height: 100px;
-    margin-left: auto;
+    width: 100vw;
+     
+    &.sticky{
+        background-color: transparent;
+        position: sticky;
+        //height: 100px;
+        top: 0;
+
+        #myNav{
+            height: 60px;
+        }
+
+        #logo {
+            font-size: 24px;
+            & div {
+            transform: rotate(0deg);
+          }
+        }
+    }
+    
+}
+
+#myNav {
+
+    height: 100%;
+    width: 90%;
+    margin-left:auto;
     margin-right: auto;
-    
-    display: flex;
+    display: flex;   
     align-items: center;
-
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: $bg-color-elementy;
+    transition: height .5s ease;
 }
-
-#logo
-{
+.kontener {
     display: flex;
-    // font-family: 'Kaushan Script', cursive;
-    font-size: 30px;
-    letter-spacing: 3px;
-    font-weight: bold;
+    color: black; 
+    margin-left: auto;
+    margin-right: auto; 
+    width: 90%;
+    align-items: center;
+    justify-content: center;
     
 }
 
-#logo div 
-{
+.kontener.isMobile {
+    justify-content: space-between;
+}
+
+#logo {
+    display: flex;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    letter-spacing: 4px;
+    //font-weight: bold; 
+    transition: font-size .5s; 
+
+    & div {
     color: red;
     transform: rotate(-21deg);
     padding-right: 15px;
+    transition: transform .5s;
+    }
 }
 
-#menu
-{
-    margin-left: auto;
+
+#menu {
+    margin-left: auto;    
 }
 
-#menuLista 
-{
+#menuLista {
     list-style: none;
     margin: 0;
     font-size: 16px;        // góra prawo dół lewo
     padding: 0;
-    display: flex;
-    
-    
+    display: flex;  
 }
 
-.itemList
-{
+.itemList {
     padding-right: 10px; 
 }
 
-.menuLink
-{
+.menuLink {
    padding: 10px; 
-   color: white; 
+   color: black; 
    transition: color 0.2s ease, font-size 0.2s ease, border-bottom 0.2s ease-in-out;
 
    &:hover 
@@ -77,4 +109,109 @@
         color: red; 
    }
 
+}
+
+#mobiMenu {
+    
+    
+    width: 90%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:$bg-color-elementy;
+    border-radius: 20px;
+    margin-top: 20px;
+    //z-index: 900;
+    position: relative;
+}
+
+#mobiNav {
+    text-align: center;
+    list-style: none;
+    font-size: 20px;
+    letter-spacing: 6px;
+    
+
+    li {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        
+    }
+
+    li:nth-child(1) {
+        padding-top: 20px;
+    }
+
+    li:nth-child(6) {
+        padding-bottom: 20px;
+    }
+}
+
+.hamburger {
+        // display: none; 
+        position: relative;
+        width: 32px;
+        height: 24px;
+        transition: .2s;
+
+
+        span
+        {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: black;
+            transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
+        }
+
+        span:nth-child(1) 
+        {
+            top: 0;
+            
+        }
+
+        span:nth-child(2) 
+        {
+            top: calc(50% - 2px);
+        }
+
+        span:nth-child(3) 
+        {
+            bottom: 0;
+        
+        }
+    }
+
+    .hamburger.HamburgerActive {
+        transform: rotate(-90deg);
+
+        span:nth-child(1) 
+        {
+            top: calc(50% - 2px);
+            transform: rotate(45deg);
+        }
+
+        span:nth-child(2) 
+        {
+            opacity: 0;
+        }
+
+        span:nth-child(3) 
+        {
+            bottom: calc(50% - 2px);
+            transform: rotate(-45deg);
+        }
+    
+    }
+
+@media (min-width:767px) and (max-width: 991px) {
+
+}
+
+@media (min-width:577px) and (max-width: 767px) {
+    
+}
+
+@media (max-width: 576px) {
+    
 }

@@ -1,0 +1,23 @@
+$bg-color: #302e2e;
+$bg-color-elementy: rgb(235, 231, 215);
+$color-font: white;
+
+
+
+.home-kontener{
+    //
+    
+    
+    margin-left: auto;
+    margin-right: auto;
+   // background-color: $bg-color;
+    padding-top: 60px;
+    color: $color-font;
+    //animation: opacity 1s ease-in;
+}
+
+@keyframes opacity{
+   from{opacity: 0;}
+   to {opacity: 1;}
+}
+

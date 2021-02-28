@@ -1,0 +1,23 @@
+$bg-color: #302e2e;
+$bg-color-elementy: rgb(235, 231, 215);
+$color-font: white;
+
+#app-container{
+  background-color: $bg-color;
+   &.bg-color {
+    background-color:$bg-color-elementy; 
+
+   }
+}
+
+#router-outlet{
+    transition: .5s;
+
+    &.isBottom{
+      background-color: $bg-color-elementy;
+       margin-left: auto;
+       margin-right: auto;
+       overflow: hidden;
+    }
+
+}

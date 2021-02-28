@@ -1,29 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
-html, body 
+$bg-color: #302e2e;
+$bg-color-elementy: rgb(235, 231, 215);
+$bg-color-elementy-oppacity: rgb(235, 231, 215, .7);
+$color-font: black;
+
+*,html
 { 
-    height: 100%;
-    overflow: scroll;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 body 
 {
-    margin: 0;
+    height: 100vh;
+    overflow-y: auto;
     font-family: 'IBM Plex Mono', sans-serif;
     // font-family: 'Kaushan Script', cursive;
-    background: #423f3f;
+    background:$bg-color;
 }
 
 ::-webkit-scrollbar 
 {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+   width: 0px;  /* Remove scrollbar space */
+   background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb 
 {
-    background: #FF0000;
+    background: transparent;
 }
   
   

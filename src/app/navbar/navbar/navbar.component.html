@@ -1,13 +1,40 @@
-<nav class="myNav">
-    <div class="contener">
-       <div id="logo"><div>Nerdy </div>ratują świat</div>
-       <div id="menu"><ul id="menuLista">
-           <li class="itemList"><a routerLink='/' class="menuLink"><i class="fas fa-home"></i></a></li>
-           <li class="itemList"><a routerLink='/Porady' class="menuLink">PORADY</a></li>
-           <li class="itemList"><a href="" class="menuLink">ĆWICZENIA</a></li>
-           <li class="itemList"><a href="" class="menuLink">DIETA</a></li>
-           <li class="itemList"><a href="" class="menuLink">O NAS</a></li>
-           <li class="itemList"><a href="" class="menuLink">KONTAKT</a></li>
-       </ul></div> 
-    </div>
-</nav>
+<div id="menu-kontener">
+    <nav id="myNav" >
+        <div  class="kontener" [@inOutAnimation] [ngClass] = "{isMobile: isMobile}">
+            
+            <div id="logo"><div>Nerdy</div>ratują świat</div>
+                            
+            <div *ngIf = "!isMobile" id="menu">
+                <ul id="menuLista">
+                    <li class="itemList"><a routerLink='/' class="menuLink" >HOME</a></li>
+                    <li class="itemList"><a routerLink='Porady' class="menuLink">PORADY</a></li>
+                    <li class="itemList"><a href="" class="menuLink">ĆWICZENIA</a></li>
+                    <li class="itemList"><a href="" class="menuLink">DIETA</a></li>
+                    <li class="itemList"><a href="" class="menuLink">O NAS</a></li>
+                    <li class="itemList"><a href="" class="menuLink">KONTAKT</a></li>
+                </ul>
+            </div> 
+                    
+            <div *ngIf = "isMobile" class="burgerContener">
+                <div (click) = "toggler()" class="hamburger" [ngClass] = "{HamburgerActive : togglerActiv}">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> 
+            </div>  
+        </div> 
+        
+    </nav>
+    <div id = "mobiMenu" *ngIf = "togglerActiv" [@inOutAnimation]>
+        <ul id="mobiNav">
+            <li class="itemList"><a routerLink='/' class="menuLink" (click) = "toggler()">HOME</a></li>
+            <li class="itemList"><a routerLink='/Porady' class="menuLink" (click) = "toggler()">PORADY</a></li>
+            <li class="itemList"><a href="" class="menuLink" (click) = "toggler()">ĆWICZENIA</a></li>
+            <li class="itemList"><a href="" class="menuLink" (click) = "toggler()">DIETA</a></li>
+            <li class="itemList"><a href="" class="menuLink" (click) = "toggler()">O NAS</a></li>
+            <li class="itemList"><a href="" class="menuLink" (click) = "toggler()">KONTAKT</a></li>
+        </ul>
+    </div> 
+</div>
+
+

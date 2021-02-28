@@ -1,0 +1,17 @@
+$bg-color: #302e2e;
+$bg-color-elementy: rgb(235, 231, 215);
+$color-font: white;
+
+.porady-kontener {
+    background-color: $bg-color;
+    padding-top: 100px;
+    color: $color-font;
+    animation: opacity 1s ease-in;
+}
+
+@keyframes opacity{
+    from{opacity: 0;}
+    to {opacity: 1;}
+ }
+
+

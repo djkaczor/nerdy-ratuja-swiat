@@ -1,0 +1,31 @@
+$bg-color: #302e2e;
+$bg-color-elementy: rgb(235, 231, 215);
+$color-font: white;
+
+#footer-kontener{
+    background-color: rgb(235, 231, 215);
+    //height: 100%;
+
+    &.scroll {
+
+        position: sticky;
+        bottom: 0;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+            
+    }
+}
+
+.fotter-heder {
+    height: 50px;
+    background-color: $bg-color-elementy;
+   // width: 90%;
+  //  border-bottom-right-radius: 50px;
+   //@debug border-bottom-left-radius: 50px;
+} 
+
+.fotter-body {
+    background-color: $bg-color-elementy;
+    height: 100px;
+}
