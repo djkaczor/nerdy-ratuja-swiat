@@ -12,6 +12,7 @@ $color-font: white;
 
 #router-outlet{
     transition: .5s;
+    z-index: 1;
 
     &.isBottom{
       background-color: $bg-color-elementy;
