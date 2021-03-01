@@ -8,7 +8,7 @@ $color-font: black;
     background-color: $bg-color;
     height: 100px;
     width: 100vw;
-     
+    z-index: 2;
     &.sticky{
         background-color: transparent;
         position: sticky;
