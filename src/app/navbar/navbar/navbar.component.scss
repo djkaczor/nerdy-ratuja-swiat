@@ -1,5 +1,5 @@
 $bg-color: #302e2e;
-$bg-color-elementy: rgb(235, 231, 215);
+$bg-color-elementy: rgb(235, 231, 215, 1);
 $bg-color-elementy-oppacity: rgb(235, 231, 215, .7);
 $color-font: black;
 
@@ -113,7 +113,7 @@ $color-font: black;
 
 #mobiMenu {
     
-    
+    display:block;
     width: 90%;
     justify-content: center;
     margin-left: auto;
