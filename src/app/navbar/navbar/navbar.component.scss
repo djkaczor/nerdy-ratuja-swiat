@@ -41,6 +41,9 @@ $color-font: black;
     border-bottom-right-radius: 20px;
     background-color: $bg-color-elementy;
     transition: height .5s ease;
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(8,8,8,1);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(8,8,8,1);
+    box-shadow: 10px 10px 15px 0px rgba(8,8,8,1);
 }
 .kontener {
     display: flex;
@@ -123,6 +126,9 @@ $color-font: black;
     margin-top: 20px;
     z-index: 2;
     position: relative;
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(8,8,8,1);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(8,8,8,1);
+    box-shadow: 10px 10px 15px 0px rgba(8,8,8,1);
 }
 
 #mobiNav {
