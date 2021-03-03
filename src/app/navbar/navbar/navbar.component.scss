@@ -1,0 +1,241 @@
+$bg-color: #302e2e;
+$bg-color-elementy: rgb(235, 231, 215, 1);
+$bg-color-elementy-oppacity: rgb(235, 231, 215, .7);
+$color-font: black;
+
+#menu-kontener
+{
+    background-color: $bg-color;
+    height: 100px;
+    width: 100vw;
+    z-index: 2;
+<<<<<<< HEAD
+     
+=======
+>>>>>>> 4bd3ea899ba51739dbe071f936af757efac367f3
+    &.sticky{
+        background-color: transparent;
+        position: sticky;
+        //height: 100px;
+        top: 0;
+
+        #myNav{
+            height: 60px;
+            
+        }
+
+        #logo {
+            font-size: 24px;
+            & div {
+            transform: rotate(0deg);
+          }
+        }
+    }
+    
+}
+
+#myNav {
+
+    height: 90%;
+    width: 90%;
+    padding-bottom: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    display: flex;   
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: $bg-color-elementy;
+    transition: height .5s ease;
+<<<<<<< HEAD
+
+    -webkit-box-shadow: 5px 5px 15px 0px #000000; 
+box-shadow: 5px 5px 15px 0px #000000;
+=======
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(235, 231, 215, 1);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(235, 231, 215, 1);
+    box-shadow: 10px 10px 15px 0px rgba(235, 231, 215, 1);
+>>>>>>> 4bd3ea899ba51739dbe071f936af757efac367f3
+}
+.kontener {
+    display: flex;
+    color: black; 
+    margin-left: auto;
+    margin-right: auto; 
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.kontener.isMobile {
+    justify-content: space-between;
+}
+
+#logo {
+    display: flex;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 28px;
+    letter-spacing: 4px;
+    //font-weight: bold; 
+    transition: font-size .5s; 
+
+    & div {
+    color: red;
+    transform: rotate(-21deg);
+    padding-right: 15px;
+    transition: transform .5s;
+    }
+}
+
+
+#menu {
+    margin-left: auto;    
+}
+
+#menuLista {
+    list-style: none;
+    margin: 0;
+    font-size: 16px;        // góra prawo dół lewo
+    padding: 0;
+    display: flex;  
+}
+
+.itemList {
+    padding-right: 10px; 
+}
+
+.menuLink {
+   padding: 8px; 
+   color: black; 
+   transition: color 0.2s ease, font-size 0.2s ease, border-bottom 0.2s ease-in-out;
+
+   &:hover 
+   {
+    
+        text-decoration: none;
+        font-size: 17px; 
+        color: red;  
+   }
+   
+   &:focus
+   {
+        font-size: 17px; 
+        color: red; 
+   }
+
+}
+
+#mobiMenu {
+    
+    display:block;
+    width: 90%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:$bg-color-elementy;
+    border-radius: 20px;
+    margin-top: 20px;
+    z-index: 2;
+    position: relative;
+<<<<<<< HEAD
+
+    -webkit-box-shadow: 5px 5px 15px 0px #000000; 
+    box-shadow: 5px 5px 15px 0px #000000;
+=======
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(235, 231, 215, 1);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(235, 231, 215, 1);
+    box-shadow: 10px 10px 15px 0px rgba(235, 231, 215, 1);
+>>>>>>> 4bd3ea899ba51739dbe071f936af757efac367f3
+}
+
+#mobiNav {
+    text-align: center;
+    list-style: none;
+    font-size: 20px;
+    letter-spacing: 6px;
+    
+
+    li {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        
+    }
+
+    li:nth-child(1) {
+        padding-top: 20px;
+    }
+
+    li:nth-child(6) {
+        padding-bottom: 20px;
+    }
+}
+
+.hamburger {
+        // display: none; 
+        position: relative;
+        width: 32px;
+        height: 24px;
+        transition: .2s;
+
+
+        span
+        {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: black;
+            transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
+        }
+
+        span:nth-child(1) 
+        {
+            top: 0;
+            
+        }
+
+        span:nth-child(2) 
+        {
+            top: calc(50% - 2px);
+        }
+
+        span:nth-child(3) 
+        {
+            bottom: 0;
+        
+        }
+    }
+
+    .hamburger.HamburgerActive {
+        transform: rotate(-90deg);
+
+        span:nth-child(1) 
+        {
+            top: calc(50% - 2px);
+            transform: rotate(45deg);
+        }
+
+        span:nth-child(2) 
+        {
+            opacity: 0;
+        }
+
+        span:nth-child(3) 
+        {
+            bottom: calc(50% - 2px);
+            transform: rotate(-45deg);
+        }
+    
+    }
+
+@media (min-width:767px) and (max-width: 991px) {
+
+}
+
+@media (min-width:577px) and (max-width: 767px) {
+    
+}
+
+@media (max-width: 576px) {
+    
+}
