@@ -36,7 +36,7 @@ $color-font: white;
 }
 
 .container-fluid{
-    width: 90%;
+    width: 60%;
 
     .row {
         justify-content: center;
@@ -47,4 +47,5 @@ $color-font: white;
 .card {
     color:black;
     margin: 8px;
+    height: auto;
 }
